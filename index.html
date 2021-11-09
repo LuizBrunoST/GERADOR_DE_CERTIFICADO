@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Certificado</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+<script>
+window.onload = draw;
+var nome = prompt('Qual é o seu nome?');
+var sobre = prompt('Digite sobre o certificado')
+function draw() {
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext('2d');
+    ctx.fillStyle = 'lightblue';
+    ctx.fillRect(0, 0, 500, 300);
+    ctx.fillStyle = 'white';
+    ctx.font = '18px futura';
+    ctx.fillText('CERTIFICADO DE ' + sobre , 2, 30);
+    ctx.fillText('Isto é para certificar que ' + nome , 2, 60);
+    ctx.font = '100px monospace'
+    ctx.fillText('</>|', 3, 200)
+    ctx.font = '10px futura';
+    ctx.fillText('Excelente e profissional desenvolvedor', 230, 150)
+    ctx.fillText('Certificado pelo W3, SoloLearn e Microsoft', 230, 170)
+}
+</script>
+	  <canvas id="canvas" width="500" height="300"></canvas>
+	</body>
+</html>
